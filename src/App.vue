@@ -1,5 +1,8 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import { ref } from 'vue'
+
+const isMenuOpen = ref(false)
 
 const contact = {
   address: "Jl. Raya Sejahtera No. 1, Kec. Pecalonan, Kab. Kendal, Jawa Tengah 51352",
@@ -17,12 +20,31 @@ const currentYear = new Date().getFullYear();
         <RouterLink to="/" class="text-2xl font-bold text-green-800">
           Desa Selokarto
         </RouterLink>
+
+        <div class="md:hidden">
+          <button @click="isMenuOpen = !isMenuOpen">
+            <svg v-if="isMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+            <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+
         <div class="hidden md:flex items-center space-x-8">
           <RouterLink to="/" class="text-gray-700 hover:text-green-600 transition-colors">Beranda</RouterLink>
           <a href="/#budaya" class="text-gray-700 hover:text-green-600 transition-colors">Kebudayaan</a>
           <a href="/#peta" class="text-gray-700 hover:text-green-600 transition-colors">Peta</a>
           <a href="#kontak" class="text-gray-700 bg-green-100 hover:bg-green-200 px-4 py-2 rounded-full transition-colors">Kontak</a>
         </div>
+      </div>
+
+      <div :class="isMenuOpen ? 'block' : 'hidden'" class="md:hidden bg-white shadow-lg">
+        <a @click="isMenuOpen = false" href="/" class="block py-2 px-6 text-sm text-gray-700 hover:bg-green-50">Beranda</a>
+        <a @click="isMenuOpen = false" href="/#budaya" class="block py-2 px-6 text-sm text-gray-700 hover:bg-green-50">Kebudayaan</a>
+        <a @click="isMenuOpen = false" href="/#peta" class="block py-2 px-6 text-sm text-gray-700 hover:bg-green-50">Peta</a>
+        <a @click="isMenuOpen = false" href="#kontak" class="block py-2 px-6 text-sm text-gray-700 hover:bg-green-50">Kontak</a>
       </div>
     </nav>
 
