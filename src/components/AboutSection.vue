@@ -25,5 +25,4 @@
 </template>
 
 <script setup>
-// Ganti gambar dan nama kepala desa sesuai data asli
 </script>

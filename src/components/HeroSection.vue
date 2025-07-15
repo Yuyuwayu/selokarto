@@ -14,5 +14,4 @@
 </template>
 
 <script setup>
-// Tidak perlu script untuk komponen sederhana ini
 </script>

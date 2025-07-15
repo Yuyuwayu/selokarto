@@ -34,5 +34,4 @@
 </template>
 
 <script setup>
-// Untuk ke depannya, Anda bisa mengambil data detail acara dari API berdasarkan ID di URL
 </script>

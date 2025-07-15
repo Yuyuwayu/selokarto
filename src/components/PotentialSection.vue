@@ -34,5 +34,4 @@
 </template>
 
 <script setup>
-// Ganti gambar dan teks sesuai potensi Desa Selokarto
 </script>

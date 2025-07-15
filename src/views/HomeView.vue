@@ -120,7 +120,6 @@ const heroStyle = reactive({
 </template>
 
 <style scoped>
-/* Tidak ada perubahan di style */
 .hero-section { background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; }
 html { scroll-behavior: smooth; }
 </style>

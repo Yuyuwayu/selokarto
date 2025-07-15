@@ -13,5 +13,4 @@
 </template>
 
 <script setup>
-// Ganti data kontak sesuai data asli
 </script>
