@@ -1,9 +1,8 @@
 <script setup>
 import { reactive } from 'vue';
-import { RouterLink } from 'vue-router'; // Impor RouterLink untuk tombol
+import { RouterLink } from 'vue-router';
 
 const villageData = reactive({
-  // ... (data lainnya tetap sama)
   name: "Desa Selokarto",
   tagline: "Menjelajahi Keindahan dan Potensi Desa yang Asri, Mandiri, dan Berbudaya.",
   heroImage: 'https://i.imgur.com/fK6Cu1F.jpeg',
@@ -22,10 +21,9 @@ const villageData = reactive({
     { title: "Kerajinan Tangan", description: "Keterampilan warga dalam mengolah bambu dan kayu menghasilkan produk unik.", imageUrl: "https://images.pexels.com/photos/1297938/pexels-photo-1297938.jpeg" }
   ],
 
-  // --- DATA BARU & PERUBAHAN ---
   administrativeMapImage: "https://petatematikindo.wordpress.com/wp-content/uploads/2013/03/administrasi-jawa-tegah-a1-1.jpg", // Ganti dengan URL gambar peta administrasi Anda
   mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15839.041399494337!2d109.85018721458239!3d-7.037427387432219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7015d38a4365c3%3A0x16c8e21ce392529f!2sSelokarto%2C%20Kec.%20Pecalungan%2C%20Kabupaten%20Batang%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1752558042328!5m2!1sid!2sid",
-  // DATA BARU: Untuk section Kebudayaan & Acara
+
   events: [
     {
       id: 'sedekah-bumi',
